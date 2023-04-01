@@ -7,7 +7,7 @@ const router = express.Router({
 });
 
 // 文章列表
-router.get('/articles', tokenMiddleware, (req, res) => {
+router.get('/articles', (req, res) => {
   ArticleModel.find()
     .then(data => {
       res.json({ 
