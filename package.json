@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "nodemon ./bin/www",
-    "server": "node ./bin/www"
+    "server": "node ./bin/www",
+    "pm2": "ENABLE_NODE_LOG=YES pm2 start ecosystem.config.js"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
