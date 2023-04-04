@@ -5,13 +5,13 @@ const ArticleSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  author: {
-    type: String,
-    required: true
-  },
   category: {
     type: String,
     required: true
+  },
+  description: {
+    type: String,
+    required: false
   },
   tag: {
     type: [],
@@ -29,6 +29,14 @@ const ArticleSchema = new mongoose.Schema({
     type: Date,
     required: true
   },
+  cover_img: {
+    type: String,
+    required: false
+  },
+  is_top: {
+    type: Boolean,
+    required: true
+  }
 })
 
 const ArticleModel = mongoose.model('articles', ArticleSchema)

@@ -7,7 +7,7 @@ const router = express.Router({
 });
 
 // 文章列表
-router.get('/articles', (req, res) => {
+router.get('/article', (req, res) => {
   ArticleModel.find()
     .then(data => {
       res.json({ 
@@ -58,7 +58,7 @@ router.post('/article', tokenMiddleware, (req, res) => {
     .catch(err => {
       res.json({
         code: 3001,
-        msg: 'failed',
+        msg: err.message,
         data: null
       })
     })
