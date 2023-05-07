@@ -7,7 +7,7 @@ const router = express.Router({
 });
 
 // 文章列表
-router.get('/article', (req, res) => {
+router.get('/articles', (req, res) => {
   ArticleModel.find()
     .then(data => {
       res.json({ 
@@ -59,7 +59,7 @@ router.post('/article', tokenMiddleware, (req, res) => {
       res.json({
         code: 3001,
         msg: err.message,
-        data: null
+        data: err
       })
     })
 })

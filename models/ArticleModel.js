@@ -13,11 +13,11 @@ const ArticleSchema = new mongoose.Schema({
     type: String,
     required: false
   },
-  tag: {
+  tags_name: {
     type: [],
     required: true
   },
-  body: {
+  content: {
     type: String,
     required: true
   },
@@ -34,7 +34,7 @@ const ArticleSchema = new mongoose.Schema({
     required: false
   },
   is_top: {
-    type: Boolean,
+    type: Number,
     required: true
   }
 })

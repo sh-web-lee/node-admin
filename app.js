@@ -11,6 +11,7 @@ dotenv.config()
 
 const userApi = require('./routes/api/user')
 const articleApi = require('./routes/api/article')
+const uploadImgApi = require('./routes/api/oss')
 
 const app = express();
 
@@ -27,6 +28,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/api/user', userApi)
 app.use('/api', articleApi)
+app.use('/api/upload', uploadImgApi)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
